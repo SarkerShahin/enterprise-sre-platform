@@ -1,5 +1,5 @@
 # use the light wight Alpine version of Nginx
-FORM nginx:alpine
+FROM nginx:alpine
 
 # Remove the defualt Nginx welcome page
 RUN rm /usr/share/nginx/html/*
