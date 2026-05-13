@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-deployment
+  labels:
+    app: resume
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resume
+  template:
+    metadata:
+      labels:
+        app: resume
+    spec:
+      containers:
+      - name: resume-app
+        image: resume-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
